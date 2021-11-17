@@ -34,7 +34,7 @@
               '641df564-59c3-4806-ba24-88a954647091',
               '1.0.0',
               'us-west-2',
-              'https://client.rum.us-east-1.amazonaws.com/1.0.0/cwr.js',
+              'https://client.rum.us-east-1.amazonaws.com/1.0.2/cwr.js',
               {
                 sessionSampleRate: 1,
                 guestRoleArn: 'arn:aws:iam::750664202209:role/RUM-Monitor-us-west-2-750664202209-5795469856361-Unauth',
@@ -42,9 +42,10 @@
                 endpoint: 'https://dataplane.rum-gamma.us-west-2.amazonaws.com',
                 telemetries: [
                   'errors',
-                  ['http', { trace: true }],
+                  'http',
                   'performance'
-                ]
+                ],
+		enableXRay: true
               }
       );
     </script>
