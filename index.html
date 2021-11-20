@@ -60,7 +60,7 @@
       <button id="paged-js-error" style="font-size: x-large;padding: 5px;" onclick="jsError2()">Generate Page specific JS Error</button>
       <button id="http-error" style="font-size: x-large;padding: 5px;" onclick="httpError()">Generate HTTP Error</button>
       <button id="http-200" style="font-size: x-large;padding: 5px;" onclick="http200()">Generate HTTP 200</button>
-      <button id="aws-http-request" style="font-size: x-large;padding: 5px;" onclick="awsHttpRequest()">AWS HTTP</button>
+      <button id="aws-http-request" style="font-size: x-large;padding: 5px;" onclick="awsHttpRequest()">Test API GW</button>
     </section>
     <section class="main-content">
       <h3>
@@ -120,7 +120,7 @@ $ git checkout gh-pages
           fetch("https://httpstat.us/200");
         }
         function awsHttpRequest() {
-          fetch("https://ht-test-111.s3.amazonaws.com/payload.json");
+          fetch("https://od3yahtv57.execute-api.us-west-2.amazonaws.com/test/helloworld?name=John&city=Seattle");
         }
 	</script>
 
