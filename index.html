@@ -8,48 +8,27 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <script>
-      (function (n, i, v, r, s, c, u, x, z) {
-        x = window.AwsRumClient = {
-          q: [],
-          n: n,
-          i: i,
-          v: v,
-          r: r,
-          c: c,
-          u: u
-        };
-        window[n] = function (c, p) {
-          x.q.push({ c: c, p: p });
-        };
-        z = document.createElement('script');
-        z.async = true;
-        z.src = s;
-        document.head.insertBefore(
-                z,
-                document.getElementsByTagName('script')[0]
-        );
-      })(
-              'cwr',
-              '641df564-59c3-4806-ba24-88a954647091',
-              '1.0.0',
-              'us-west-2',
-              'https://client.rum.us-east-1.amazonaws.com/1.0.2/cwr.js',
-              {
-                sessionSampleRate: 1,
-                guestRoleArn: 'arn:aws:iam::750664202209:role/RUM-Monitor-us-west-2-750664202209-5795469856361-Unauth',
-                identityPoolId: 'us-west-2:c59c7f46-9f06-4697-b2c9-6448f9d9c2ce',
-                endpoint: 'https://dataplane.rum-gamma.us-west-2.amazonaws.com',
-                telemetries: [
-                  'errors',
-                  ['http', { addXRayTraceIdHeader: true }],
-                  'performance'
-                ],
-		enableXRay: true,
-		allowCookies: true
-              }
-      );
+    
+    <script>(function (n, i, v, r, s, c, x, z) {
+      x = window.AwsRumClient = { q: [], n: n, i: i, v: v, r: r, c: c };
+      window[n] = function (c, p) {
+        x.q.push({ c: c, p: p });
+      };
+      z = document.createElement('script');
+      z.async = true;
+      z.src = s;
+      document.head.insertBefore(z, document.getElementsByTagName('script')[0]);
+    })('cwr', '3f8c706e-dfa5-40ae-8097-1c2daaf99611', '1.0.0', 'us-west-2', 'https://client.rum.us-east-1.amazonaws.com/1.0.2/cwr.js', {
+      sessionSampleRate: 1,
+      guestRoleArn: "arn:aws:iam::750664202209:role/RUM-Monitor-us-west-2-750664202209-8219199362461-Unauth",
+      identityPoolId: "us-west-2:601c037b-bdc6-434b-b7e6-a1ab60381051",
+      endpoint: "https://dataplane.rum.us-west-2.amazonaws.com",
+      telemetries: ["performance", "errors", ["http", { addXRayTraceIdHeader: true }]],
+      allowCookies: true,
+      enableXRay: true,
+    });
     </script>
+
 
   </head>
   <body>
