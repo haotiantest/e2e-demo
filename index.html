@@ -42,7 +42,7 @@
                 endpoint: 'https://dataplane.rum-gamma.us-west-2.amazonaws.com',
                 telemetries: [
                   'errors',
-                  'http',
+                  ['http', { addXRayTraceIdHeader: true }],
                   'performance'
                 ],
 		enableXRay: true,
@@ -50,8 +50,6 @@
               }
       );
     </script>
-<!--    <script>(function(n,i,a,v,r,s,c,x,z){x=window.AwsNexusTelemetry={q:[],n:n,i:i,a:a,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;document.head.insertBefore(z,document.getElementsByTagName('script')[0]);})('nexus','641df564-59c3-4806-ba24-88a954647091','rum-xray-servicelens-11-11','1.0.0','us-west-2','https://d1ktxyteejjrbw.cloudfront.net/assets/rum-javascript-telemetry.js',{sessionSampleRate:1,guestRoleArn:"arn:aws:iam::750664202209:role/RUM-Monitor-us-west-2-750664202209-5795469856361-Unauth",identityPoolId:"us-west-2:c59c7f46-9f06-4697-b2c9-6448f9d9c2ce",endpoint:"http://dataplane.localhost:8080"});nexus('configurePlugin', {pluginId: "com.amazonaws.rum.fetch", config: [{trace: true}]});nexus('configurePlugin', {pluginId: "com.amazonaws.rum.xhr", config: [{trace: true}]});</script>-->
-<!--    <script>(function(n,i,a,v,r,s,c,x,z){x=window.AwsNexusTelemetry={q:[],n:n,i:i,a:a,v:v,r:r,c:c};window[n]=function(c,p){x.q.push({c:c,p:p});};z=document.createElement('script');z.async=true;z.src=s;document.head.insertBefore(z,document.getElementsByTagName('script')[0]);})('nexus','641df564-59c3-4806-ba24-88a954647091','rum-xray-servicelens-11-11','1.0.0','us-west-2','https://d1ktxyteejjrbw.cloudfront.net/assets/rum-javascript-telemetry.js',{sessionSampleRate:1,guestRoleArn:"arn:aws:iam::750664202209:role/RUM-Monitor-us-west-2-750664202209-5795469856361-Unauth",identityPoolId:"us-west-2:c59c7f46-9f06-4697-b2c9-6448f9d9c2ce",endpoint:"http://dataplane.localhost:8080"});nexus('configurePlugin', {pluginId: "xray_fetch_plugin", config: {trace: true}});</script>-->
 
   </head>
   <body>
