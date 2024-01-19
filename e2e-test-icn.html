@@ -21,7 +21,7 @@
       guestRoleArn: "arn:aws:iam::609391207627:role/RUM-Monitor-ap-northeast-2-609391207627-4040263965071-Unauth",
       identityPoolId: "ap-northeast-2:89a70350-e8ee-412e-a035-50ad2129df0e",
       endpoint: "https://dataplane.rum.ap-northeast-2.amazonaws.com",
-      telemetries: ["performance","errors","http"],
+      telemetries: ["performance","errors",["http", {addXRayTraceIdHeader: true}]],
       allowCookies: true,
       enableXRay: true
     }
