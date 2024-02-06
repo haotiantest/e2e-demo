@@ -23,7 +23,10 @@
       endpoint: "https://dataplane.rum.ca-central-1.amazonaws.com",
       telemetries: ["performance","errors",["http", {addXRayTraceIdHeader: true}]],
       allowCookies: true,
-      enableXRay: true
+      enableXRay: true,
+      sessionAttributes: {
+          "test-session-attribute-key": "test-session-attribute-value"
+      }
     }
   );
 </script>
